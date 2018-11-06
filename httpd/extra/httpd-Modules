@@ -31,7 +31,7 @@ LoadModule rewrite_module modules/mod_rewrite.so
 # LoadModule fcgid_module modules/mod_fcgid.so
 # LoadModule fastcgi_module modules/mod_fastcgi.so
 # cgi
-LoadModule cgi_module modules/mod_cgi.so
+# LoadModule cgi_module modules/mod_cgi.so
 LoadModule cgid_module modules/mod_cgid.so
 
 # LoadModule proxy_fcgi_module modules/mod_proxy_fcgi.so

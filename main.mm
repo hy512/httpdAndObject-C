@@ -10,8 +10,8 @@ int main(int argc, char* argv[]) {
     // NSDictionary* headers = @{
     //     @"Content-Type: "
     // };
-    getenv();
-    NSString* body = [NSString stringWithContentsOfFile: @"/home/silence/Desktop/web/index.html"
+    // getenv();
+    NSString* body = [NSString stringWithContentsOfFile: @"/home/omitted/Desktop/httpdAndObject-C/index.html"
         encoding: NSUTF8StringEncoding
         error: NULL];
     cout << "Content-Type: text/html\r\n\r\n"
