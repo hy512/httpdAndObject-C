@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #include <iostream>
+#include <iterator>
 #include <cstdlib>
 #include "lib/request.h"
 // #include <cstdio>
@@ -15,18 +16,21 @@ int main(int argc, char* argv[]) {
 
     Request *req = [[Request alloc] init];
 
-    NSMutableDictionary *search = req->search;
+    NSString *body = [req getBody];
+    // NSMutableDictionary *search = req->search;
     // NSString *name = [search valueForKey: @"name"];
-    NSString *name = [NSString stringWithFormat: @"%@", search];
+    // NSString *name = [NSString stringWithFormat: @"%@", search];
+
+    // if (getenv("REQUEST_METHOD"))
+    
     cout << "Content-Type: text/html\r\n\r\n"
         << "<html>"
         << "<head>"
         << "<meta charset=\"utf-8\"/>"
         << "</head>"
         << "<body>"
-        << req->method.UTF8String
+        << body.UTF8String
         << "<br/>"
-        << name.UTF8String
         << "</body>"
         << "</html>"
         << endl;

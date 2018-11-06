@@ -8,4 +8,5 @@
     NSMutableDictionary *headers;
 }
 -(id) init;
+-(NSString *) getBody;
 @end
