@@ -9,4 +9,4 @@ main.o : main.mm
 
 .PHONY: clean
 clean: 
-	rm $(objs) index.cgi index.fcgi
+	rm -f $(objs) index.cgi index.fcgi httpd/*_log
