@@ -2,7 +2,9 @@
 #include <iostream>
 #include <iterator>
 #include <cstdlib>
-#include "lib/request.h"
+#import "lib/request.h"
+#import "lib/response.h"
+
 // #include <cstdio>
 
 using namespace std;
@@ -12,11 +14,12 @@ int main(int argc, char* argv[]) {
     // NSDictionary* headers = @{
     //     @"Content-Type: "
     // };
+    Response *resp = [[Response alloc] init];
+    resp.name = @"Hello1233123";
+    // Request *req = [[Request alloc] init];
 
+    // NSString *body = [req getBody];
 
-    Request *req = [[Request alloc] init];
-
-    NSString *body = [req getBody];
     // NSMutableDictionary *search = req->search;
     // NSString *name = [search valueForKey: @"name"];
     // NSString *name = [NSString stringWithFormat: @"%@", search];
@@ -29,8 +32,9 @@ int main(int argc, char* argv[]) {
         << "<meta charset=\"utf-8\"/>"
         << "</head>"
         << "<body>"
-        << body.UTF8String
+        // << resp->name.UTF8String
         << "<br/>"
+        << resp.name.UTF8String
         << "</body>"
         << "</html>"
         << endl;
