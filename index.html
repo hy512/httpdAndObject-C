@@ -8,5 +8,14 @@
 </head>
 <body>
     <h1>hello</h1>
+    <script>
+        fetch("/index.cgi", {
+            headers: {
+                "Content-Type": "application/json;"
+            },
+            method: "POST",
+            body: JSON.stringify({a: 1, b: 2})
+        }).then(r=> r.json()).then(r=>console.log(r));
+    </script>
 </body>
 </html>

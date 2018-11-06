@@ -1,3 +1,5 @@
-/*.o
+*.o
 /index.cgi
 /httpd/*_log
+
+*.d
