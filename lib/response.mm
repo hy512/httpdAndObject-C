@@ -3,9 +3,10 @@
 
 
 
-@implementation Response  {
-    NSString *name;
-}
+@implementation Response 
+//  {
+//     NSString *name;
+// }
 
 -(NSString *) getName {
     return @"什么都没有";

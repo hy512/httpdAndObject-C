@@ -1,0 +1,9 @@
+
+objs = rmain.o network.o
+
+main : $(objs)
+	gcc -lstdc++ $(objs)  -o main
+rmain.o: main.cpp ./lib/network.h
+	gcc -c -lstdc++ main.cpp -o rmain.o
+network.o: ./lib/network.h ./lib/network.cpp
+	gcc -c -lstdc++ ./lib/network.cpp

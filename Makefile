@@ -12,6 +12,8 @@ response.o : ./lib/response.h ./lib/response.mm
 	gcc -c `gnustep-config --objc-flags` -lgnustep-base -lstdc++ -lobjc ./lib/response.mm
 format.o : ./lib/format.h ./lib/format.m
 	gcc -c `gnustep-config --objc-flags` -lgnustep-base -lobjc ./lib/format.m
+
+
 .PHONY: clean
 clean: 
 	rm -f $(objs) *cgi httpd/*_log *.d
